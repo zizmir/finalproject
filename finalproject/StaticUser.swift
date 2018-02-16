@@ -11,5 +11,5 @@
 class StaticUser {
     static let instance: StaticUser = StaticUser()
     
-    var name: String = “"
+    var user: User? = User(name: "" , password : "")
 }

@@ -26,8 +26,7 @@ class RegisterView: UIView {
     @IBOutlet var notRegisterLabel : UILabel!
     
     @IBAction func registerAction() {
-        
-        delegate?.ShowRegisterView()
+        delegate?.RegisterUser(name: emailText.text!, password: passwordText.text!, confirmPassword: confirmPasswordText.text!)
     }
     
     @IBAction func LoginAction() {

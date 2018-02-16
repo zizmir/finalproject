@@ -26,7 +26,7 @@ class LoginView: UIView  {
     }
     
     @IBAction func LoginAction() {
-        //delegate?.SignInView()
+        delegate?.ConnectUser(name: emailText.text!,password: passwordText.text!)
     }
     
     override init(frame: CGRect) {

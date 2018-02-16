@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9832E6CF2036F31B00CBAB4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832E6CE2036F31B00CBAB4B /* User.swift */; };
 		9832E6D12036F60700CBAB4B /* StaticUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832E6D02036F60700CBAB4B /* StaticUser.swift */; };
+		9832E6D4203721F700CBAB4B /* SignViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832E6D3203721F700CBAB4B /* SignViewDelegate.swift */; };
+		9832E6D62037221F00CBAB4B /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832E6D52037221F00CBAB4B /* SignUpViewDelegate.swift */; };
 		985000DB20358C8D0011C5C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985000DA20358C8D0011C5C6 /* AppDelegate.swift */; };
 		985000E020358C8E0011C5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985000DE20358C8E0011C5C6 /* Main.storyboard */; };
 		985000E220358C8E0011C5C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985000E120358C8E0011C5C6 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		9832E6CE2036F31B00CBAB4B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9832E6D02036F60700CBAB4B /* StaticUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticUser.swift; sourceTree = "<group>"; };
+		9832E6D3203721F700CBAB4B /* SignViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewDelegate.swift; sourceTree = "<group>"; };
+		9832E6D52037221F00CBAB4B /* SignUpViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewDelegate.swift; sourceTree = "<group>"; };
 		985000D720358C8D0011C5C6 /* finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985000DA20358C8D0011C5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985000DF20358C8E0011C5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		9832E6D2203721DC00CBAB4B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9832E6D3203721F700CBAB4B /* SignViewDelegate.swift */,
+				9832E6D52037221F00CBAB4B /* SignUpViewDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 		985000CE20358C8D0011C5C6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +88,7 @@
 		985000D920358C8D0011C5C6 /* finalproject */ = {
 			isa = PBXGroup;
 			children = (
+				9832E6D2203721DC00CBAB4B /* Delegate */,
 				9832E6CD2036F2BD00CBAB4B /* model */,
 				985000F120359F9C0011C5C6 /* Views */,
 				985000F020359A2D0011C5C6 /* ViewController */,
@@ -182,10 +196,12 @@
 			files = (
 				985000ED20358D150011C5C6 /* LoginViewController.swift in Sources */,
 				985000FC2035A2850011C5C6 /* RegisterView.swift in Sources */,
+				9832E6D4203721F700CBAB4B /* SignViewDelegate.swift in Sources */,
 				9832E6D12036F60700CBAB4B /* StaticUser.swift in Sources */,
 				985000F82035A2250011C5C6 /* LoginView.swift in Sources */,
 				9832E6CF2036F31B00CBAB4B /* User.swift in Sources */,
 				985000DB20358C8D0011C5C6 /* AppDelegate.swift in Sources */,
+				9832E6D62037221F00CBAB4B /* SignUpViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

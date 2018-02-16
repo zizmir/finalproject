@@ -7,20 +7,13 @@
 //
 
 import UIKit
-protocol SignInViewDelegate {
-    func ShowLoginView()
-    func ConnectUser()
-}
-protocol SignUpViewDelegate {
-    func ShowRegisterView()
-}
 
 class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDelegate {
     
     @IBOutlet var loginView: LoginView!
     @IBOutlet var registerView: RegisterView!
     var model:User?
-
+    let instance = StaticUser.instance
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -33,7 +26,6 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
         // Dispose of any resources that can be recreated.
     }
     
-    
     func ShowLoginView() {
         loginView.isHidden = true
         registerView.isHidden = false
@@ -44,7 +36,26 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
         loginView.isHidden = false
         registerView.isHidden = true
     }
-    func ConnectUser(){
-        model = User(name: "blek", password: "1234567")
+    func ConnectUser(name:String,password:String){
+       if(password == self.instance.user?.password && name == self.instance.user?.name)
+       {
+         print("connextion réussi")
+        
+        }
+    }
+    func RegisterUser(name:String,password:String, confirmPassword : String){
+        self.instance.user?.name = name
+        
+        guard password == confirmPassword else {
+           print("Email or password invalid")
+           return
+        }
+        print(name)
+        print(password)
+        print(confirmPassword)
+        model = User(name: name, password: password)
+        self.instance.user?.password = password
+        
+      
     }
 }
