@@ -37,11 +37,13 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
         registerView.isHidden = true
     }
     func ConnectUser(name:String,password:String){
-       if(password == self.instance.user?.password && name == self.instance.user?.name)
+       guard password == self.instance.user?.password && name == self.instance.user?.name else
        {
-         print("connextion réussi")
+            print("Unable to find a match with this pair of email / password")
+            return
+       }
         
-        }
+        print("Successful login")
     }
     func RegisterUser(name:String,password:String, confirmPassword : String){
         self.instance.user?.name = name
@@ -50,9 +52,6 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
            print("Email or password invalid")
            return
         }
-        print(name)
-        print(password)
-        print(confirmPassword)
         model = User(name: name, password: password)
         self.instance.user?.password = password
         
