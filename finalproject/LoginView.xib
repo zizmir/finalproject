@@ -1,16 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="finalproject" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="lzo-Lc-H4I"/>
+                <outlet property="emailLabel" destination="HvL-lu-Cum" id="4na-xk-aHf"/>
+                <outlet property="emailText" destination="wSg-ul-KAd" id="sh4-VW-hYF"/>
+                <outlet property="notRegisterLabel" destination="wv0-ol-jgF" id="NmS-tY-42i"/>
+                <outlet property="passwordLabel" destination="EMT-Ev-SDK" id="pAo-GI-yqC"/>
+                <outlet property="passwordText" destination="b9n-Qe-5iM" id="D02-Rb-PPv"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvL-lu-Cum">
+                    <rect key="frame" x="16" y="28" width="41" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passeword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-Ev-SDK">
+                    <rect key="frame" x="16" y="97" width="84" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-ul-KAd">
+                    <rect key="frame" x="16" y="57" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9n-Qe-5iM">
+                    <rect key="frame" x="16" y="133" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-rE-p7J">
+                    <rect key="frame" x="16" y="282" width="343" height="30"/>
+                    <color key="backgroundColor" red="0.052218264248704682" green="0.014118241816682827" blue="0.026514059360474899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <state key="normal" title="Register"/>
+                    <connections>
+                        <action selector="registerAction" destination="-1" eventType="touchUpInside" id="0yC-kT-wCp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99V-oh-Ppn">
+                    <rect key="frame" x="16" y="212" width="343" height="30"/>
+                    <color key="backgroundColor" red="0.05221826425" green="0.01411824182" blue="0.026514059360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="LoginAction" destination="-1" eventType="touchUpInside" id="e7q-Pl-1jk"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv0-ol-jgF">
+                    <rect key="frame" x="27" y="259" width="146" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="146" id="8W1-3Q-hZw"/>
+                        <constraint firstAttribute="height" constant="21" id="v7Y-VF-lL3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3yZ-rE-p7J" secondAttribute="trailing" constant="16" id="0ep-n7-YDa"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="leading" secondItem="wSg-ul-KAd" secondAttribute="leading" id="9LU-VV-pTS"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="width" secondItem="wSg-ul-KAd" secondAttribute="width" id="BdG-82-EAj"/>
+                <constraint firstItem="EMT-Ev-SDK" firstAttribute="top" secondItem="wSg-ul-KAd" secondAttribute="bottom" constant="10" id="CAE-jg-uz4"/>
+                <constraint firstItem="3yZ-rE-p7J" firstAttribute="width" secondItem="99V-oh-Ppn" secondAttribute="width" id="CQr-WO-YJe"/>
+                <constraint firstAttribute="trailing" secondItem="wSg-ul-KAd" secondAttribute="trailing" constant="16" id="E5a-qq-4uD"/>
+                <constraint firstItem="99V-oh-Ppn" firstAttribute="top" secondItem="b9n-Qe-5iM" secondAttribute="bottom" constant="49" id="EyC-D7-zFD"/>
+                <constraint firstAttribute="trailing" secondItem="99V-oh-Ppn" secondAttribute="trailing" constant="16" id="InU-ew-iIu"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="KqC-33-AVH"/>
+                <constraint firstItem="3yZ-rE-p7J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NC8-F3-1el"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="leading" secondItem="HvL-lu-Cum" secondAttribute="leading" id="NEE-3a-NtT"/>
+                <constraint firstItem="wv0-ol-jgF" firstAttribute="top" secondItem="99V-oh-Ppn" secondAttribute="bottom" constant="17" id="Nmw-h5-TBb"/>
+                <constraint firstItem="3yZ-rE-p7J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="282" id="Tbc-fi-vdm"/>
+                <constraint firstItem="3yZ-rE-p7J" firstAttribute="height" secondItem="99V-oh-Ppn" secondAttribute="height" id="apZ-Kh-xON"/>
+                <constraint firstItem="wSg-ul-KAd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="cDH-0q-aMm"/>
+                <constraint firstItem="wv0-ol-jgF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="dN1-kJ-cYH"/>
+                <constraint firstItem="wSg-ul-KAd" firstAttribute="top" secondItem="HvL-lu-Cum" secondAttribute="bottom" constant="8" symbolic="YES" id="dcZ-et-2ZI"/>
+                <constraint firstItem="3yZ-rE-p7J" firstAttribute="top" secondItem="wv0-ol-jgF" secondAttribute="bottom" constant="2" id="gOx-hs-rHA"/>
+                <constraint firstItem="wSg-ul-KAd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="57" id="h6V-Hv-KDb"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="top" secondItem="EMT-Ev-SDK" secondAttribute="bottom" constant="15" id="owD-Mx-2Tr"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="height" secondItem="wSg-ul-KAd" secondAttribute="height" id="u8f-67-jRa"/>
+                <constraint firstItem="99V-oh-Ppn" firstAttribute="leading" secondItem="3yZ-rE-p7J" secondAttribute="leading" id="wCy-gB-K1j"/>
+                <constraint firstAttribute="trailing" secondItem="b9n-Qe-5iM" secondAttribute="trailing" constant="16" id="xU4-0t-Ajy"/>
+                <constraint firstItem="b9n-Qe-5iM" firstAttribute="leading" secondItem="EMT-Ev-SDK" secondAttribute="leading" id="zKI-cA-o83"/>
+                <constraint firstItem="99V-oh-Ppn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="zLc-pO-hDE"/>
+            </constraints>
+            <point key="canvasLocation" x="99" y="86"/>
         </view>
     </objects>
 </document>

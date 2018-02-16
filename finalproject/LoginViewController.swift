@@ -7,13 +7,25 @@
 //
 
 import UIKit
+protocol SignInViewDelegate {
+    func ShowLoginView()
+    func ConnectUser()
+}
+protocol SignUpViewDelegate {
+    func ShowRegisterView()
+}
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDelegate {
+    
+    @IBOutlet var loginView: LoginView!
+    @IBOutlet var registerView: RegisterView!
+    var model:User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        loginView.delegate = self
+        registerView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +33,18 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func ShowLoginView() {
+        loginView.isHidden = true
+        registerView.isHidden = false
+        
     }
-    */
-
+    
+    func ShowRegisterView() {
+        loginView.isHidden = false
+        registerView.isHidden = true
+    }
+    func ConnectUser(){
+        model = User(name: "blek", password: "1234567")
+    }
 }
